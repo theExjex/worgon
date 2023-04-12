@@ -1,17 +1,17 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import homePage from '@/components/Home-p.vue';
+import { createRouter, createWebHistory } from "vue-router";
+import homePage from "@/components/Home-c.vue";
 
-const router = [
+const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: homePage,      
+    path: "/",
+    name: "home",
+    component: homePage,
     children: [],
   },
   {
-    path: '/about',
-    name: 'about',
-    component: () => import(/* webpackChunkName: "about" */ '@/components/About-p.vue'),
+    path: "/about",
+    name: "about",
+    component: () => import(/* webpackChunkName: "about" */ "@/components/About-c.vue"),
     children: [],
   },
 ];
